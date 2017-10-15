@@ -1,0 +1,46 @@
+* {
+  border: 1px solid grey;
+}
+
+body {
+  background: orange;
+}
+
+li {
+  border: 2px solid red;
+}
+
+.completed {
+  text-decoration: line-through;
+}
+
+#special {
+  background: yellow;
+}
+
+ /*decendant */
+li a {
+  color: red;
+}
+
+/* all uls adjacent to h4s */
+h4 + ul {
+
+}
+
+/* attribute selector */
+a[href="http://www.google.com"] {
+  background: blue;
+}
+
+input[type="checkbox"] {
+
+}*/
+
+
+/* nth of type */
+li:nth-of-type(3) {
+  background: purple;
+}
+
+

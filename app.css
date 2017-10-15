@@ -1,0 +1,21 @@
+h1 {
+  /*color: #000000;*/
+  /*color: #FF0000; */
+  /*color: #00FF00;*/
+  /*color: #0000FF;*/
+  /*color: #FF00FF;*/
+  /*color: #FFFF00;*/
+  /*color: #00FFFF;*/
+  /*color: rgb(0, 255, 0);*/
+
+  color: rgb(0, 255, 0); /* the fallback (not all browsers support rgba; include fallback)*/
+  color: rgba(0, 255, 0, 0.1);
+}
+
+li  {
+  color: #4B0082;
+}
+
+h4 {
+  color: #FF1493
+}
