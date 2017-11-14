@@ -1,0 +1,60 @@
+body {
+    padding-top: 70px;
+}
+
+.jumbotron {
+    color: #2c3e50;
+    background: #ecf0f1;
+}
+
+.navbar-inverse {
+    background: #2c3e50;
+}
+
+.navbar-inverse .navbar-brand,
+.navbar-inverse .navbar-nav>li>a {
+        color: white;
+}
+
+.jumbotron a:visited,
+.jumbotron a:link {
+    text-decoration: none;
+    color: #2c3e50;
+}
+
+/* photo gallery links with sizing controlled */
+/* solution pattern from: https://codepen.io/nax3t/pen/MJwpdb */
+#image1 {
+  background-image: url(https://images.unsplash.com/photo-1491622652925-46646d8a603d?auto=format&fit=crop&w=1694&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D);
+}
+#image2 {
+  background-image: url(https://images.unsplash.com/photo-1504672281656-e4981d70414b?auto=format&fit=crop&w=1500&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D);
+}
+#image3 {
+  background-image: url(https://images.unsplash.com/photo-1508099322709-89ed33401752?auto=format&fit=crop&w=1500&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D);
+}
+#image4 {
+  background-image: url(https://images.unsplash.com/photo-1502406724053-edd6e0a00ba5?auto=format&fit=crop&w=2550&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D);
+}
+#image5 {
+  background-image: url(https://images.unsplash.com/photo-1501791067216-b7ff15175275?auto=format&fit=crop&w=2389&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D);
+}
+#image6 {
+  background-image: url(https://images.unsplash.com/photo-1496619228461-106b2fbe121f?auto=format&fit=crop&w=2550&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D);
+}
+#image7 {
+  background-image: url(https://images.unsplash.com/photo-1495985262958-d7b873c0f044?auto=format&fit=crop&w=2467&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D);
+}
+#image8 {
+  background-image: url(https://images.unsplash.com/photo-1495933809024-1551ed7c19c9?auto=format&fit=crop&w=2389&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D);
+}
+#image9 {
+  background-image: url(https://images.unsplash.com/photo-1428976386736-54acf0ea08ba?auto=format&fit=crop&w=2550&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D);
+}
+
+.image {
+  width: 100%;
+  height: 250px;
+  background-size: cover;
+  background-position: center center;
+}
