@@ -6,8 +6,9 @@ colors = ["rgb(255, 0, 0)",
           "rgb(0, 0, 255)"]
 
 var squares = document.querySelectorAll(".square");
-var pickedColor = colors[3];
+var pickedColor = pickColor(); 
 var colorDisplay = document.getElementById("colorDisplay");
+var messageDisplay = document.querySelector("#message");
 
 colorDisplay.textContent = pickedColor;
 
@@ -20,10 +21,22 @@ for (var i = 0; i < squares.length; i++) {
         // grab color of clicked square
         var clickedColor = this.style.backgroundColor;
         if (pickedColor === clickedColor) {
-            alert("correct!");
+            changeColors(clickedColor);
+            messageDisplay.textContent = "Correct!";
         } else {
-            alert("wrong");
+            this.style.background = "#232323"
+            messageDisplay.textContent = "Try Again!";
         }
     })
 }
 
+function changeColors(color) {
+    for (var i = 0; i < colors.length; i++) {
+        squares[i].style.backgroundColor = color;
+    }
+}
+
+function pickColor() {
+   var random = Math.floor(Math.random() * colors.length + 1);
+   return colors[random];
+}
