@@ -1,14 +1,10 @@
-colors = ["rgb(255, 0, 0)",
-          "rgb(255, 255, 0)",
-          "rgb(0, 255, 0)",
-          "rgb(0, 255, 255)",
-          "rgb(255, 0, 255)",
-          "rgb(0, 0, 255)"]
+colors = generateRandomColors(6); 
 
 var squares = document.querySelectorAll(".square");
 var pickedColor = pickColor(); 
 var colorDisplay = document.getElementById("colorDisplay");
 var messageDisplay = document.querySelector("#message");
+var h1 = document.querySelector('h1');
 
 colorDisplay.textContent = pickedColor;
 
@@ -23,6 +19,7 @@ for (var i = 0; i < squares.length; i++) {
         if (pickedColor === clickedColor) {
             changeColors(clickedColor);
             messageDisplay.textContent = "Correct!";
+            h1.style.backgroundColor = clickedColor
         } else {
             this.style.background = "#232323"
             messageDisplay.textContent = "Try Again!";
@@ -37,6 +34,30 @@ function changeColors(color) {
 }
 
 function pickColor() {
-   var random = Math.floor(Math.random() * colors.length + 1);
+   var random = Math.floor(Math.random() * colors.length);
+   console.log(random)
    return colors[random];
+}
+
+function generateRandomColors(num) {
+  // make array
+  var arr = []
+  // add num random colors to array
+  for (var i = 0; i < num; i++) {
+      // get random color and push into array
+      arr.push(randomColor());
+  }
+  // return that array
+  return arr;
+}
+
+function randomColor() {
+    var r = randColorValue();
+    var g = randColorValue();
+    var b = randColorValue();
+    return "rgb("+ r + ", " + g + ", " + b + ")"; 
+}
+
+function randColorValue() {
+    return Math.floor(Math.random() * 256);
 }
