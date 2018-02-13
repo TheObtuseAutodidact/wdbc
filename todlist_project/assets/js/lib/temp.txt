@@ -1,0 +1,1 @@
+Later, for practice, we'll add minified jQuery lib in this directory
