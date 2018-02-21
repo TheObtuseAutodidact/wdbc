@@ -21,3 +21,7 @@ $("input[type='text']").keypress(function(event) {
         $("ul").append("<li><span><i class='fa fa-trash'></i></span> " + todoText + "</li>");
     }
 });
+
+$("h1").on("click", function() { // replace target element with 'fa-plus' icon
+    $("input[type='text']").slideToggle();
+})
