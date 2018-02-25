@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script type="text/javascript" src="../patatap_project/paper-full.js"></script>
+    <link rel="stylesheet" type="text/css" href="circles.css">
+    <script type="text/paperscript" canvas="myCanvas">
+        // Create a Paper.js Path to draw a line into it:
+        // var path = new Path();
+        //Give the stroke a color
+        // path.strokeColor = "red";
+        // var start = new Point(100, 100);
+        // Moe to start and draw a line from there
+        // path.moveTo(start);
+        // Note the plust operator on Point objects.
+        // PaperScript does that for us, and much more!
+        // path.lineTo(start + [100, -50]);
+
+        var circle = new Path.Circle({
+            center: [50, 50],
+            radius: 5,
+            fillColor: 'purple'
+        });    
+    
+        for (var j=0; j < 100; j++) {
+            for (var i = 0; i < 100; i++) {
+                var copy = circle.clone();
+                // Distribute the copies horizontally and vertically, so we can see them:
+                copy.position.x += i * copy.bounds.width * 4;
+                copy.position.y += j * copy.bounds.height * 4;
+            }
+        }
+    </script>
+<body>
+  <canvas id=myCanvas resize></canvas> 
+</body> 
+</html>
